@@ -1,0 +1,97 @@
+@import 'fonts';
+@import 'mixins';
+@import 'var';
+
+.aboutHike {
+    background-color: #FDFDFD;
+    height: 726px;
+
+    box-sizing: border-box;
+    padding-top: 100px;
+    
+    &__containerStyle{
+        display: flex;
+        gap: 250px;
+    }
+
+    &__leftBlock {
+        width: 480px;
+    }
+
+    &__imageContainer {
+        position: relative;
+    }
+
+    &__mountains {
+        position: relative;
+        z-index: 0;
+    }
+
+    &__videoContainer {
+        position: absolute;
+        top: 126px;
+        left: 130px;
+        z-index: 1;
+        width: 350px;
+        height: 400px;
+        overflow: hidden;
+        border-radius: 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__videoPlayer {
+        width: 100%;
+        height: auto;
+    }
+
+    &__playBtn {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        cursor: pointer;
+    }
+
+
+    &__rightBlock {
+        max-width: 580px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 40px;
+        padding-top: 64px;
+    }
+
+    &__shortText {
+        @include styleShortText;
+    }
+
+    &__title {
+        @include styleTitle;
+    }
+
+    &__text {
+        @include styleText;
+    }
+
+    &__tourProgrammBtn {
+        box-sizing: border-box;
+        padding: 12px 24px;
+        font-family: "Nunito Sans", sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        background-color: #1A3E3E;
+        border: 1px solid #1A3E3E;
+        color: #FDFDFD;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.6s ease, color 0.6s ease;
+    }
+
+    &__tourProgrammBtn:hover {
+        background-color: #FDFDFD;
+        color: #1A3E3E;
+    }
+}

@@ -1,0 +1,82 @@
+@import 'fonts';
+@import 'mixins';
+@import 'var';
+
+.offers {
+    background-color: #F3F5F4;
+    padding: 80px 0 100px;
+
+    &__containerStyle{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 90px;
+    }
+    &__aboutOffers {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+    &__blockAdvantages{
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+    &__advantage{
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        gap: 7px;
+    }
+    &__titleAdvantage{
+        font-family: "Nunito Sans", sans-serif;
+        font-size: 18px;
+        font-weight: 800;
+        color: #18121E;
+    }
+    &__textAdvantage{
+        font-family: "Nunito Sans", sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        color: #000000;
+    }
+    &__priceBtn{
+        width: 236px;
+        height: 52px;
+
+        background-color: #1A3E3E;
+        border: 1px solid #1A3E3E;
+        border-radius: 4px;
+
+        font-family: "Nunito Sans", sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        color: #FDFDFD;
+    
+        cursor: pointer;
+
+        transition: background-color 0.6s ease, color 0.6s ease;
+    }
+    &__priceBtn:hover {
+        background-color: #FDFDFD;
+        color: #1A3E3E;
+    }
+    &__blockImages{
+        display: grid;
+        grid-template-columns: repeat(2, 2fr);
+        gap: 10px;
+        width: 100%;
+    }
+
+    &__shortText {
+        @include styleShortText;
+    }
+
+    &__title {
+        @include styleTitle;
+    }
+
+    &__text {
+        @include styleText;
+    }
+}

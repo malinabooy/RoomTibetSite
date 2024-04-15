@@ -1,0 +1,105 @@
+@import 'fonts';
+@import 'mixins';
+@import 'var';
+
+.subscribeNewsletter {
+    background: linear-gradient(to bottom, #FDFDFD 50%, #1A3E3E 50%);
+    &__centerContainer {
+        width: 1180px;
+        height: 196px;
+        background-color: #FDFDFD;
+        border-radius: 6px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+
+        padding: 40px 100px;
+        box-sizing: border-box;
+
+        display: flex;
+        gap: 64px;
+        justify-content: center;
+        align-content: center;
+        flex-wrap: wrap;
+    }
+
+    &__blockWithTitle {
+        width: 380px;
+    }
+
+    &__blockWithForm {
+        width: 536px;
+    }
+
+    &__formSubcribe {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    &__nameFormSubcribe {
+        font-family: "Nunito Sans", sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        color: #18121E;
+    }
+
+    &__blockInput {
+        display: flex;
+        gap: 8px;
+    }
+
+    &__inputEmail {
+        width: 280px;
+        height: 44px;
+
+        padding: 0 16px;
+        box-sizing: border-box;
+
+        background-color: #F3F5F4;
+        border: 1px solid #F3F5F4;
+        border-radius: 4px;
+    }
+
+    &__subscribeBtn {
+        width: 240px;
+        height: 44px;
+
+        background-color: #1A3E3E;
+        border: 1px solid #1A3E3E;
+        border-radius: 4px;
+
+        font-family: "Nunito Sans", sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        color: #FDFDFD;
+
+        cursor: pointer;
+        transition: background-color 0.6s ease, color 0.6s ease;
+    }
+
+    &__subscribeBtn:hover {
+        background-color: #FDFDFD;
+        color: #1A3E3E;
+    }
+
+    &__agreement {
+        font-family: "Nunito Sans", sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        color: #18121E;
+    }
+
+    &__agreement span {
+        text-decoration: underline;
+    }
+
+    &__shortText {
+        @include styleShortText;
+        font-size: 18px;
+        text-align: left;
+    }
+
+    &__title {
+        @include styleTitle;
+        font-size: 26px;
+    }
+}

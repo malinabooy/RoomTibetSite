@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RoomTibet</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/lightpick.css">
+</head>
+
+<body>
+    <header class="heading">
+        <div class="heading__containerStyle container">
+            <div class="heading__top">
+                <a href="index.html">
+                    <img src="img/icons/headerLogo.svg" alt="logo" class="heading__logo">
+                </a>
+                <nav class="heading__navigation">
+                    <ul class="heading__links">
+                        <li><a href="#" class="heading__links">Главная</a></li>
+                        <li><a href="#" class="heading__links">Про гида</a></li>
+                        <li><a href="#" class="heading__links">Программа тура</a></li>
+                        <li><a href="#" class="heading__links">Стоимость</a></li>
+                        <li><a href="#" class="heading__links">Блог</a></li>
+                        <li><a href="#" class="heading__links">Контакты</a></li>
+                        <li><button class="heading__consultationBtn">Консультация</button></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="heading__bottom">
+                <h1 class="heading__title">Насладись прогулкой в горах<br>с командой единомышленников</h1>
+                <div class="heading__blockSelectTourDate">
+                    <div class="heading__dropDown">
+                        <button class="heading__dropDownBtn" id="dropDownBtn">Локация для турa <img
+                                class="heading__upDownIcon" src="/img/icons/ep_arrow-down.svg" alt="">
+                        </button>
+                        <ul class="heading__dropDownList">
+                            <li class="heading__dropDownListItem" data-value="country1">Египет</li>
+                            <li class="heading__dropDownListItem" data-value="country2">Швейцария</li>
+                            <li class="heading__dropDownListItem" data-value="country3">Германия</li>
+                            <li class="heading__dropDownListItem" data-value="country4">США</li>
+                            <li class="heading__dropDownListItem" data-value="country5">Канада</li>
+                        </ul>
+                        <input class="heading__dropDownInputHidden" type="text" name="selectCountry" value="">
+                        <span class="heading__labelNearForm">выберите из списка</span>
+                    </div>
+                    <div class="heading__selectDate">
+                        <span class="heading__dateSvg">
+                            <input class="heading__inputDateForm" type="text" id="datepicker"
+                                placeholder="Дата похода" />
+                        </span>
+                        <span class="heading__labelNearDate">укажите диапазон</span>
+                    </div>
+                    <div class="heading__dropDown">
+                        <button class="heading__dropDownBtn">Участники <img class="heading__upDownIcon"
+                                src="/img/icons/ep_arrow-down.svg" alt=""></button>
+                        <ul class="heading__dropDownList">
+                            <li class="heading__dropDownListItem" data-value="count1">4</li>
+                            <li class="heading__dropDownListItem" data-value="count2">5-6</li>
+                            <li class="heading__dropDownListItem" data-value="count3">7-8</li>
+                            <li class="heading__dropDownListItem" data-value="count4">9-10</li>
+                            <li class="heading__dropDownListItem" data-value="count5">10+</li>
+                        </ul>
+                        <input class="heading__dropDownInputHidden" type="text" name="selectCount" value="">
+                        <span class="heading__labelNearForm">минимум 4 человека</span>
+                    </div>
+                    <button class="heading__searchProgrammBtn" type="button">Найти программу</button>
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <section class="aboutHike">
+        <div class="aboutHike__containerStyle container">
+            <div class="aboutHike__leftBlock">
+                <div class="aboutHike__imageContainer">
+                    <img src="img/article/imageHike.png" alt="mountains" class="aboutHike__mountains">
+                    <div class="aboutHike__videoContainer">
+                        <video loop id="my_video" muted class="aboutHike__videoPlayer" onclick="playPause()">
+                            <source src="img/article/videoHike.mp4">
+                        </video>
+                        <img class="aboutHike__playBtn" src="img/icons/iconPlay.svg" alt="Play Button"
+                            onclick="playPause()">
+                    </div>
+                </div>
+            </div>
+            <article class="aboutHike__rightBlock">
+                <div class="aboutHike__title_block">
+                    <p class="aboutHike__shortText">о нашем походе</p>
+                    <h2 class="aboutHike__title">Исследуйте все горные массивы мира вместе с нами</h2>
+                </div>
+                <p class="aboutHike__text">Его корни уходят в один фрагмент классической латыни 45 года н.э., то есть
+                    более
+                    двух тысячелетий назад. Ричард МакКлинток, профессор латыни из колледжа Hampden-Sydney, штат
+                    Вирджиния, взял одно из самых странных слов в Lorem Ipsum, "consectetur"и занялся его поисками в
+                    классической латинской литературе.</p>
+                <button class="aboutHike__tourProgrammBtn">Программа тура</button>
+            </article>
+        </div>
+    </section>
+    <section class="offers">
+        <div class="offers__containerStyle container">
+            <article class="offers__aboutOffers">
+                <div class="offers__blockTitleOffers">
+                    <h1 class="offers__shortText">наше предложение</h1>
+                    <h2 class="offers__title">Лучшие программы для тебя</h2>
+                </div>
+                <p class="offers__text">Его корни уходят в один фрагмент классической латыни 45 года н.э., то есть более
+                    двух тысячелетий назад. Ричард МакКлинток, профессор латыни из колледжа.</p>
+                <div class="offers__blockAdvantages">
+                    <div class="offers__advantage">
+                        <img src="img/icons/experienceIcon.png" alt="icon" class="offers__imageAdvantage">
+                        <section class="offers__aboutAdvantage">
+                            <h1 class="offers__titleAdvantage">Опытный гид</h1>
+                            <p class="offers__textAdvantage">Для современного мира базовый вектор развития предполагает
+                                независимые способы реализации соответствующих условий активизации.</p>
+                        </section>
+                    </div>
+                    <div class="offers__advantage">
+                        <img src="img/icons/securityIcon.png" alt="icon" class="offers__imageAdvantage">
+                        <section class="offers__aboutAdvantage">
+                            <h1 class="offers__titleAdvantage">Безопасный поход</h1>
+                            <p class="offers__textAdvantage">Для современного мира базовый вектор развития предполагает
+                                независимые способы реализации соответствующих условий активизации.</p>
+                        </section>
+                    </div>
+                    <div class="offers__advantage">
+                        <img src="img/icons/loyaltyIcon.png" alt="icon" class="offers__imageAdvantage">
+                        <section class="offers__aboutAdvantage">
+                            <h1 class="offers__titleAdvantage">Лояльные цены</h1>
+                            <p class="offers__textAdvantage">Для современного мира базовый вектор развития предполагает
+                                независимые способы реализации соответствующих условий активизации.</p>
+                        </section>
+                    </div>
+                </div>
+                <button class="offers__priceBtn">Стоимость программ</button>
+            </article>
+            <div class="offers__blockImages">
+                <img class="offers__image" src="img/article/advantageImage1 (4).png" alt="tour">
+                <img class="offers__image" src="img/article/advantageImage1 (3).png" alt="tour">
+                <img class="offers__image" src="img/article/advantageImage1 (2).png" alt="tour">
+                <img class="offers__image" src="img/article/advantageImage1 (1).png" alt="tour">
+            </div>
+        </div>
+    </section>
+    <section class="popularDirection">
+        <div class="popularDirection__containerStyle container">
+            <div class="popularDirection__blockTitleDirection">
+                <h1 class="popularDirection__shortText">по версии отдыхающих</h1>
+                <h2 class="popularDirection__title">Популярные направления</h2>
+            </div>
+            <div class="popularDirection__examplesOfTours">
+                <div class="popularDirection__tour">
+                    <img src="img/article/backgroundLake.png" alt="lake">
+                    <div class="popularDirection__blockWithRank">
+                        <img class=" popularDirection__iconRank" width="17" src="img/icons/iconStar.svg" alt="star">
+                        <h2 class="popularDirection__rankValue">4.9</h2>
+                    </div>
+                    <div class="popularDirection__pullTour">
+                        <div class="popularDirection__tourVisibility">
+                            <div class="popularDirection__mainTextTour">
+                                <h1 class="popularDirection__titleTour">Озеро возле гор</h1>
+                                <p class="popularDirection__textTour">романтическое приключение</p>
+                            </div>
+                            <div class="popularDirection__priceTour">
+                                <p class="price">480 $</p>
+                            </div>
+                        </div>
+                        <div class="popularDirection__tourHidden">
+                            <p class="popularDirection__tourHiddenText">Его корни уходят в один фрагмент
+                                классической латыни 45 года
+                                н.э., то есть более двух тысячелетий назад. Ричард МакКлинток, профессор латыни из
+                                колледжа Hampden-Sydney, штат Вирджиния, взял одно из самых странных слов в Lorem
+                                Ipsum,
+                                "consectetur"и занялся его поисками в классической латинской литературе.</p>
+
+                            <button class="popularDirection__tourProgrammBtn">Программа тура</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="popularDirection__tour">
+                    <img src="img/article/backgroundMountains.png" alt="lake">
+                    <div class="popularDirection__blockWithRank">
+                        <img class="popularDirection__iconRank" width="17" src="img/icons/iconStar.svg" alt="star">
+                        <h2 class="popularDirection__rankValue">4.5</h2>
+                    </div>
+                    <div class="popularDirection__pullTour">
+                        <div class="popularDirection__tourVisibility">
+                            <div class="popularDirection__mainTextTour">
+                                <h1 class="popularDirection__titleTour">Ночь в горах</h1>
+                                <p class="popularDirection__textTour">в компании друзей</p>
+                            </div>
+                            <div class="popularDirection__priceTour">
+                                <p class="price">500 $</p>
+                            </div>
+                        </div>
+                        <div class="popularDirection__tourHidden">
+                            <p class="popularDirection__tourHiddenText">Его корни уходят в один фрагмент
+                                классической латыни 45 года
+                                н.э., то есть более двух тысячелетий назад. Ричард МакКлинток, профессор латыни из
+                                колледжа Hampden-Sydney, штат Вирджиния, взял одно из самых странных слов в Lorem
+                                Ipsum,
+                                "consectetur"и занялся его поисками в классической латинской литературе.</p>
+
+                            <button class="popularDirection__tourProgrammBtn">Программа тура</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="popularDirection__tour">
+                    <img src="img/article/backgroundYoga.png" alt="lake">
+                    <div class="popularDirection__blockWithRank"">
+                        <img class=" popularDirection__iconRank" width="17" src="img/icons/iconStar.svg" alt="star">
+                        <h2 class="popularDirection__rankValue">5.0</h2>
+                    </div>
+                    <div class="popularDirection__pullTour">
+                        <div class="popularDirection__tourVisibility">
+                            <div class="popularDirection__mainTextTour">
+                                <h1 class="popularDirection__titleTour">Йога в горах</h1>
+                                <p class="popularDirection__textTour">для тех, кто забоится о себе</p>
+                            </div>
+                            <div class="popularDirection__priceTour">
+                                <p class="price">230 $</p>
+                            </div>
+                        </div>
+                        <div class="popularDirection__tourHidden">
+                            <p class="popularDirection__tourHiddenText">Его корни уходят в один фрагмент
+                                классической латыни 45 года
+                                н.э., то есть более двух тысячелетий назад. Ричард МакКлинток, профессор латыни из
+                                колледжа Hampden-Sydney, штат Вирджиния, взял одно из самых странных слов в Lorem
+                                Ipsum,
+                                "consectetur"и занялся его поисками в классической латинской литературе.</p>
+
+                            <button class="popularDirection__tourProgrammBtn">Программа тура</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="popularDirection__rankDirectionBtn">Рейтинг направлений</button>
+        </div>
+
+
+    </section>
+    <section class="shareImpressions">
+        <div class="shareImpressions__containerStyle container">
+            <div class="shareImpressions__blockTitleImpressions">
+                <h1 class="shareImpressions__shortText">делимся впечатлениями</h1>
+                <h2 class="shareImpressions__title">Блог о путешествиях</h2>
+            </div>
+            <div class="shareImpressions__blocksWithArticles">
+                <div class="shareImpressions__blockArticle">
+                    <img src="img/article/imageArticle.png" alt="image_impressions">
+                    <div class="shareImpressions__information">
+                        <div class="shareImpressions__blockWithText">
+                            <a href="#">
+                                <h1 class="shareImpressions__titleImpressions">Красивая Италия, какая она в реальности?
+                                </h1>
+                            </a>
+                            <p class="shareImpressions__textImpressoins">Для современного мира базовый вектор развития
+                                предполагает
+                                независимые способы реализации соответствующих условий активизации.</p>
+
+                        </div>
+
+                        <div class="shareImpressions__dateAndLink">
+                            <span class="shareImpressions__postDate">01/04/2023</span>
+                            <a href="#" class="shareImpressions__linkForRead">читать статью</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="shareImpressions__blockArticle">
+                    <img src="img/article/imageArticle2.png" alt="image_impressions">
+                    <div class="shareImpressions__information">
+                        <div class="shareImpressions__blockWithText">
+                            <a href="#">
+                                <h1 class="shareImpressions__titleImpressions">Долой сомнения! Весь мир открыт для вас!
+                                </h1>
+
+                            </a>
+                            <p class="shareImpressions__textImpressoins">Для современного мира базовый вектор развития
+                                предполагает
+                                независимые способы реализации соответствующих условий активизации ... независимые
+                                способы реализации соответствующих условий активизации . Для современного мира базовый
+                                вектор развития предполагает независимые способы реализации соответствующих условий
+                                активизации ... независимые способы реализации соответствующих условий активизации ...
+                            </p>
+                        </div>
+
+                        <div class="shareImpressions__dateAndLink">
+                            <span class="shareImpressions__postDate">01/04/2023</span>
+                            <a href="#" class="shareImpressions__linkForRead">читать статью</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="shareImpressions__blockArticle">
+                    <img src="img/article/imageArticle3.png" alt="image_impressions">
+                    <div class="shareImpressions__information">
+                        <div class="shareImpressions__blockWithText">
+                            <a href="#">
+                                <h1 class="shareImpressions__titleImpressions">Как подготовиться к путешествию в
+                                    одиночку?
+                                </h1>
+
+                            </a>
+                            <p class="shareImpressions__textImpressoins">Для современного мира базовый вектор развития
+                                предполагает.</p>
+                        </div>
+
+                        <div class="shareImpressions__dateAndLink">
+                            <span class="shareImpressions__postDate">01/04/2023</span>
+                            <a href="#" class="shareImpressions__linkForRead">читать статью</a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="shareImpressions__blockArticle">
+                    <img src="img/article/imageArticle4.png" alt="image_impressions">
+                    <div class="shareImpressions__information">
+                        <div class="shareImpressions__blockWithText">
+                            <a href="#">
+                                <h1 class="shareImpressions__titleImpressions">Индия ... летим?</h1>
+                            </a>
+                            <p class="shareImpressions__textImpressoins">Для современного мира базовый</p>
+
+                        </div>
+
+                        <div class="shareImpressions__dateAndLink">
+                            <span class="shareImpressions__postDate">01/04/2023</span>
+                            <a href="#" class="shareImpressions__linkForRead">читать статью</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <button class="shareImpressions__otherArticleBtn">Другие материалы</button>
+        </div>
+
+
+    </section>
+    <section class="photoHub">
+        <div class="photoHub__containerStyle container">
+            <div class="photoHub__blockTitlePhoto">
+                <h1 class="photoHub__shortText">фото-отчет</h1>
+                <h2 class="photoHub__title">Делимся впечатлениями</h2>
+            </div>
+            <div class="photoHub__gallery">
+                <div class="photoHub__containerImage photoHub__containerImage_large">
+                    <img src="img/article/imageForHub1.png" alt="photo" class="photoHub__tourImage" data-index="1">
+                    <img src="img/icons/iconZoom.svg" alt="zoomIcon" class="photoHub__zoomIcon">
+                </div>
+                <div class="photoHub__containerImage">
+                    <img src="img/article/imageForHub2.png" alt="photo" class="photoHub__tourImage" data-index="2">
+                    <img src="img/icons/iconZoom.svg" alt="zoomIcon" class="photoHub__zoomIcon">
+                </div>
+                <div class="photoHub__containerImage">
+                    <img src="img/article/imageForHub5.png" alt="photo" class="photoHub__tourImage" data-index="3">
+                    <img src="img/icons/iconZoom.svg" alt="zoomIcon" class="photoHub__zoomIcon">
+                </div>
+                <div class="photoHub__containerImage">
+                    <img src="img/article/imageForHub4.png" alt="photo" class="photoHub__tourImage" data-index="4">
+                    <img src="img/icons/iconZoom.svg" alt="zoomIcon" class="photoHub__zoomIcon">
+                </div>
+                <div class="photoHub__containerImage photoHub__containerImage_large">
+                    <img src="img/article/imageForHub3.png" alt="photo" class="photoHub__tourImage" data-index="5">
+                    <img src="img/icons/iconZoom.svg" alt="zoomIcon" class="photoHub__zoomIcon">
+                </div>
+                <div class="photoHub__containerImage">
+                    <img src="img/article/imageForHub6.png" alt="photo" class="photoHub__tourImage" data-index="6">
+                    <img src="img/icons/iconZoom.svg" alt="zoomIcon" class="photoHub__zoomIcon">
+                </div>
+            </div>
+            <div class="photoHub__modalForImage">
+                <span class="photoHub__closeIcon">&#10006;</span>
+                <button class="photoHub__prevBtn">&lt;</button>
+                <img src="img/article/imageForHub6.png" alt="photo">
+                <button class="photoHub__nextBtn">&gt;</button>
+            </div>
+            <button class="photoHub__linkPinterestBtn">Наш Pinterest</button>
+        </div>
+
+    </section>
+    <section class="subscribeNewsletter">
+        <div class="subscribeNewsletter__centerContainer container">
+            <div class="subscribeNewsletter__blockWithTitle">
+                <h1 class="subscribeNewsletter__shortText">актуально</h1>
+                <h2 class="subscribeNewsletter__title">Получайте полезные рассылки о путешествиях</h2>
+            </div>
+            <div class="subscribeNewsletter__blockWithForm">
+                <form action="" class="subscribeNewsletter__formSubcribe">
+                    <label for="subcribeNewsletter" class="subscribeNewsletter__nameFormSubcribe">Введите e-mail
+                        адрес</label>
+                    <div class="subscribeNewsletter__blockInput">
+                        <input id="subcribeNewsletter" type="email" class="subscribeNewsletter__inputEmail"
+                            placeholder="name@domain.com">
+                        <button id="subcribeNewsletter" type="submit"
+                            class="subscribeNewsletter__subscribeBtn">Подписаться на новости</button>
+                    </div>
+                    <a href="#" class="subscribeNewsletter__agreement">подписываясь на новости, вы автоматически
+                        соглашаетесь с
+                        <span>условиями обработки персональных данных</span> и <span>правилами рекламных рассылок</span>
+                    </a>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="pageFooter">
+        <div class="pageFooter__containerStyle ">
+            <section class="pageFooter__greenTopFooter container">
+                <div class="pageFooter__companyInformation">
+                    <div class="pageFooter__mainInformation">
+                        <h1 class="pageFooter__companyName pageFooter__footerTitle">Компания «РумТибет»</h1>
+                        <p class="pageFooter__companyHistory pageFooter__footerText">Его корни уходят в один фрагмент
+                            классической латыни 45 года н.э., то есть
+                            более двух тысячелетий назад. Ричард МакКлинток, профессор латыни из колледжа
+                            Hampden-Sydney.
+                        </p>
+                    </div>
+                    <div class="pageFooter__companyContacts">
+                        <a href="#" class="pageFooter__companyEmail">info@domain.com</a>
+                        <a href="#" class="pageFooter__companyNumber">+7 (123) 456-78-90</a>
+                    </div>
+                    <div class="pageFooter__socialNetworksLinks">
+                        <a href="#" class="pageFooter__socialNetworksIcon"><svg width="32" height="32"
+                                viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M16 2.66675C8.63999 2.66675 2.66666 8.64008 2.66666 16.0001C2.66666 23.3601 8.63999 29.3334 16 29.3334C23.36 29.3334 29.3333 23.3601 29.3333 16.0001C29.3333 8.64008 23.36 2.66675 16 2.66675ZM22.1867 11.7334C21.9867 13.8401 21.12 18.9601 20.68 21.3201C20.4933 22.3201 20.12 22.6534 19.7733 22.6934C19 22.7601 18.4133 22.1868 17.6667 21.6934C16.4933 20.9201 15.8267 20.4401 14.6933 19.6934C13.3733 18.8268 14.2267 18.3468 14.9867 17.5734C15.1867 17.3734 18.6 14.2668 18.6667 13.9867C18.6759 13.9443 18.6747 13.9003 18.6631 13.8585C18.6515 13.8167 18.6298 13.7783 18.6 13.7468C18.52 13.6801 18.4133 13.7067 18.32 13.7201C18.2 13.7467 16.3333 14.9868 12.6933 17.4401C12.16 17.8001 11.68 17.9868 11.2533 17.9734C10.7733 17.9601 9.86666 17.7068 9.18666 17.4801C8.34666 17.2134 7.69332 17.0668 7.74666 16.6001C7.77332 16.3601 8.10666 16.1201 8.73332 15.8668C12.6267 14.1734 15.2133 13.0534 16.5067 12.5201C20.2133 10.9734 20.9733 10.7067 21.48 10.7067C21.5867 10.7067 21.84 10.7334 22 10.8667C22.1333 10.9734 22.1733 11.1201 22.1867 11.2268C22.1733 11.3068 22.2 11.5468 22.1867 11.7334Z"
+                                    fill="white" />
+                            </svg></a>
+                        <a href="#" class="pageFooter__socialNetworksIcon"><svg width="32" height="32"
+                                viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M16.36 2.99976C8.98138 2.99976 3 8.98114 3 16.3598C3 23.7384 8.98138 29.7198 16.36 29.7198C23.7386 29.7198 29.72 23.7384 29.72 16.3598C29.72 8.98114 23.7386 2.99976 16.36 2.99976ZM21.498 18.0729C21.498 18.0729 22.6796 19.2391 22.9704 19.7805C22.9788 19.7916 22.9829 19.8027 22.9857 19.8083C23.104 20.0073 23.1318 20.1618 23.0734 20.2773C22.976 20.4693 22.642 20.564 22.5279 20.5723H20.4404C20.2956 20.5723 19.9922 20.5348 19.6248 20.2815C19.3423 20.0839 19.064 19.7596 18.7926 19.4437C18.3877 18.9733 18.037 18.5669 17.6835 18.5669C17.6386 18.5669 17.594 18.5739 17.5513 18.5878C17.2841 18.6741 16.9417 19.0554 16.9417 20.0713C16.9417 20.3886 16.6912 20.5709 16.5145 20.5709H15.5584C15.2327 20.5709 13.5363 20.4568 12.0333 18.8717C10.1935 16.9303 8.53744 13.0365 8.52352 13.0003C8.41915 12.7484 8.63486 12.6134 8.87005 12.6134H10.9784C11.2595 12.6134 11.3514 12.7846 11.4154 12.9363C11.4906 13.113 11.7661 13.8158 12.2184 14.6063C12.9518 15.8949 13.4013 16.4182 13.7618 16.4182C13.8293 16.4174 13.8957 16.4002 13.9552 16.3681C14.4256 16.1065 14.3379 14.4295 14.317 14.0816C14.317 14.0162 14.3156 13.3315 14.0749 13.0031C13.9023 12.7651 13.6087 12.6746 13.4305 12.6412C13.5026 12.5417 13.5976 12.4611 13.7075 12.406C14.0303 12.2446 14.6121 12.2209 15.1896 12.2209H15.5111C16.1373 12.2293 16.2988 12.2696 16.5256 12.3267C16.9849 12.4366 16.9946 12.7331 16.9542 13.7476C16.9417 14.0357 16.9292 14.3613 16.9292 14.7454C16.9292 14.8289 16.925 14.918 16.925 15.0126C16.9111 15.5289 16.8944 16.1148 17.259 16.3556C17.3066 16.3854 17.3615 16.4013 17.4177 16.4015C17.5443 16.4015 17.9256 16.4015 18.9582 14.6299C19.2767 14.0597 19.5534 13.4671 19.7863 12.8569C19.8072 12.8207 19.8684 12.7094 19.9408 12.6663C19.9942 12.639 20.0534 12.6252 20.1133 12.6259H22.5919C22.8619 12.6259 23.047 12.6663 23.0817 12.7706C23.143 12.9363 23.0706 13.4414 21.9392 14.9737L21.434 15.6403C20.4084 16.9846 20.4084 17.0528 21.498 18.0729Z"
+                                    fill="white" />
+                            </svg></a>
+                        <a href="#" class="pageFooter__socialNetworksIcon"><svg width="32" height="32"
+                                viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12.0533 28.7201C13.3333 29.1068 14.6267 29.3334 16 29.3334C19.5362 29.3334 22.9276 27.9287 25.4281 25.4282C27.9286 22.9277 29.3333 19.5363 29.3333 16.0001C29.3333 14.2491 28.9885 12.5153 28.3184 10.8976C27.6483 9.27996 26.6662 7.81011 25.4281 6.57199C24.19 5.33388 22.7201 4.35175 21.1025 3.68169C19.4848 3.01163 17.751 2.66675 16 2.66675C14.249 2.66675 12.5152 3.01163 10.8976 3.68169C9.27989 4.35175 7.81003 5.33388 6.57192 6.57199C4.07143 9.07248 2.66667 12.4639 2.66667 16.0001C2.66667 21.6668 6.22667 26.5334 11.2533 28.4534C11.1333 27.4134 11.0133 25.6934 11.2533 24.5068L12.7867 17.9201C12.7867 17.9201 12.4 17.1468 12.4 15.9201C12.4 14.0801 13.5467 12.7067 14.8533 12.7067C16 12.7067 16.5333 13.5468 16.5333 14.6268C16.5333 15.7734 15.7733 17.4134 15.3867 18.9868C15.16 20.2934 16.08 21.4401 17.4133 21.4401C19.7867 21.4401 21.6267 18.9068 21.6267 15.3334C21.6267 12.1334 19.3333 9.94675 16.04 9.94675C12.28 9.94675 10.0667 12.7468 10.0667 15.6934C10.0667 16.8401 10.44 18.0001 11.0533 18.7601C11.1733 18.8401 11.1733 18.9468 11.1333 19.1468L10.7467 20.6001C10.7467 20.8268 10.6 20.9068 10.3733 20.7468C8.66667 20.0001 7.68001 17.5734 7.68001 15.6134C7.68001 11.4001 10.6667 7.57342 16.4267 7.57342C21.0133 7.57342 24.5867 10.8667 24.5867 15.2401C24.5867 19.8268 21.7467 23.5068 17.68 23.5068C16.3867 23.5068 15.12 22.8134 14.6667 22.0001L13.7733 25.1601C13.4667 26.3068 12.6267 27.8401 12.0533 28.7601V28.7201Z"
+                                    fill="white" />
+                            </svg></a>
+                        <a href="#" class="pageFooter__socialNetworksIcon"><svg width="32" height="32"
+                                viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M24 8C26.76 10.72 27.8 14.52 27.1467 18.0667C27.6933 19.0267 28 20.1467 28 21.3333C28 23.1014 27.2976 24.7971 26.0474 26.0474C24.7971 27.2976 23.1014 28 21.3333 28C20.1467 28 19.0267 27.6933 18.0667 27.1467C14.52 27.8 10.72 26.76 8 24C5.24 21.28 4.2 17.48 4.85333 13.9333C4.30667 12.9733 4 11.8533 4 10.6667C4 8.89856 4.70238 7.20286 5.95262 5.95262C7.20286 4.70238 8.89856 4 10.6667 4C11.8533 4 12.9733 4.30667 13.9333 4.85333C17.48 4.2 21.28 5.24 24 8ZM16.0533 22.88C19.88 22.88 21.7867 21.04 21.7867 18.56C21.7867 16.9733 21.04 15.28 18.1467 14.6267L15.4933 14.04C14.48 13.8133 13.3333 13.5067 13.3333 12.56C13.3333 11.6 14.1333 10.9333 15.6 10.9333C18.5733 10.9333 18.2933 12.9733 19.7733 12.9733C20.5467 12.9733 21.2133 12.52 21.2133 11.7333C21.2133 9.90667 18.2933 8.53333 15.8133 8.53333C13.1333 8.53333 10.2667 9.68 10.2667 12.72C10.2667 14.1867 10.7867 15.7467 13.6667 16.4667L17.2533 17.3733C18.3333 17.64 18.6 18.24 18.6 18.8C18.6 19.7067 17.6933 20.6 16.0533 20.6C12.84 20.6 13.28 18.1333 11.56 18.1333C10.7867 18.1333 10.2267 18.6667 10.2267 19.4267C10.2267 20.9067 12 22.88 16.0533 22.88Z"
+                                    fill="white" />
+                            </svg></a>
+                    </div>
+                </div>
+                <dl class="pageFooter__companyServices">
+                    <dt class="pageFooter__footerTitle">Наши услуги</dt>
+                    <div class="pageFooter__linksServices">
+                        <dd class="pageFooter__positionContainerNew"><a href="#"
+                                class="pageFooter__linkService">Прогулки в
+                                горы летом</a></dd>
+                        <dd class="pageFooter__positionContainerNew"><a href="#" class="pageFooter__linkService">Зимние
+                                походы в горы</a></dd>
+                        <dd class="pageFooter__positionContainerNew"><a href="#"
+                                class="pageFooter__linkService">Посещение
+                                храмов в горах</a></dd>
+                        <dd class="pageFooter__positionContainerNew"><a href="#"
+                                class="pageFooter__linkService">Экстремальные виды туризма</a></dd>
+                        <dd class="pageFooter__positionContainerNew"><a href="#" class="pageFooter__linkService">Походы
+                                в
+                                джунглях Амазонии</a></dd>
+                        <dd class="pageFooter__positionContainerNew"><a href="#" class="pageFooter__linkService">Поездка
+                                в
+                                Африку</a></dd>
+                    </div>
+                </dl>
+                <dl class="pageFooter__importantInformation">
+                    <dt class="pageFooter__footerTitle">Важно для путешествий</dt>
+                    <div class="pageFooter__linksServices">
+                        <dd class="pageFooter__positionContainerNew"><a href="#" class="pageFooter__linkService">Как
+                                собрать
+                                в долгий поход?</a></dd>
+                        <dd class="pageFooter__positionContainerNew"><a href="#"
+                                class="pageFooter__linkService">Жизненно
+                                важные предметы для похода</a></dd>
+                        <dd class="pageFooter__positionContainerNew"><a href="#"
+                                class="pageFooter__linkService">Медицинская
+                                страховка, гарантии безопасности</a></dd>
+                        <dd class="pageFooter__positionContainerNew"><a href="#" class="pageFooter__linkService">Если вы
+                                врач - загляните сюда</a></dd>
+                    </div>
+                </dl>
+            </section>
+        </div>
+
+        <div class="pageFooter__blackBottomFooter ">
+            <div class="pageFooter__centerContainer container">
+                <h1 class="pageFooter__textAdress">ИП Константинопольский К.К., 2023</h1>
+                <a href="#" class="pageFooter__linkData">Политика обработки персональных данных</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+    <script src="js/lightpick.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/photo.js"></script>
+</body>
+
+</html>

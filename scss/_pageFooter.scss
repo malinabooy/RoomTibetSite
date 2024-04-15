@@ -1,0 +1,173 @@
+@import 'fonts';
+@import 'mixins';
+@import 'var';
+
+.pageFooter {
+    &__containerStyle{
+        background-color: #1A3E3E;
+        padding: 80px 0;
+        box-sizing: border-box;
+    }
+    &__greenTopFooter {
+        
+
+        display: flex;
+        justify-content: space-between
+    }
+
+    &__companyInformation {
+        max-width: 480px;
+    }
+
+    &__footerTitle {
+        font-family: "Nunito Sans", sans-serif;
+        font-size: 17px;
+        font-weight: 800;
+        color: #F3F5F4;
+        margin-bottom: 20px;
+    }
+
+    &__footerText {
+        font-family: "Nunito Sans", sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        color: #F3F5F4;
+    }
+
+    &__companyContacts {
+        display: flex;
+        gap: 24px;
+        margin-top: 80px;
+    }
+
+
+    &__companyEmail {
+        font-family: "Nunito Sans", sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        color: #F3F5F4;
+        text-decoration: underline;
+    }
+
+    &__companyNumber {
+        font-family: "Nunito Sans", sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        color: #F3F5F4;
+        text-decoration: underline;
+    }
+
+    &__companyEmail:hover {
+        color: #F2BE22;
+        cursor: pointer;
+    }
+
+    &__companyNumber:hover {
+        color: #F2BE22;
+        cursor: pointer;
+    }
+
+    &__socialNetworksLinks {
+        margin-top: 32px;
+        display: flex;
+        gap: 16px;
+    }
+
+    &__socialNetworksIcon:hover path {
+        fill: #F2BE22;
+    }
+
+    &__companyServices {
+        width: 280px;
+    }
+
+    &__importantInformation {
+        width: 280px;
+    }
+
+    &__linksServices {
+        display: flex;
+        gap: 16px;
+        flex-direction: column;
+
+    }
+
+    &__linkService {
+        font-family: "Nunito Sans", sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        color: #F3F5F4;
+        display: flex;
+        gap: 10px;
+    }
+
+    &__linkService::before {
+        content: url(../img/icons/whiteIconFooter.svg);
+    }
+
+    &__linkService:hover {
+        color: #F2BE22;
+    }
+
+    &__linkService:hover::before {
+        content: url(../img/icons/yellowIconFooter.svg);
+    }
+
+    &__positionContainerNew {
+        position: relative;
+    }
+
+    &__modalNew {
+        position: absolute;
+        visibility: hidden;
+
+        top: 0;
+        right: 0;
+
+        font-family: "Nunito Sans", sans-serif;
+        font-size: 12px;
+        font-weight: 800;
+        color: #1A3E3E;
+
+        width: 44px;
+        height: 20px;
+        background-color: #F3F5F4;
+        border-radius: 4px;
+
+        box-sizing: border-box;
+        padding: 2px 10px;
+    }
+    &__linkService:hover~ &__modalNew{
+        background-color: #F2BE22;
+    }
+    &__blackBottomFooter {
+        background-color: #18121E;
+
+        box-sizing: border-box;
+        padding: 24px 0;
+    }
+
+    &__centerContainer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__textAdress {
+        font-family: "Nunito Sans", sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        color: #ffffff;
+    }
+
+    &__linkData {
+        font-family: "Nunito Sans", sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        color: #ffffff;
+        text-decoration: underline;
+
+        cursor: pointer;
+    }
+
+}

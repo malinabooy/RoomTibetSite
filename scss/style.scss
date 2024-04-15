@@ -1,0 +1,96 @@
+@import 'fonts';
+@import 'mixins';
+@import 'var';
+
+@import 'header';
+@import 'aboutHike';
+@import 'offers';
+@import 'popularDirection';
+@import 'shareImpressions';
+@import 'photoHub';
+@import 'subscribeNewsletter';
+@import 'pageFooter';
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+:root {
+    --container-width: 1140px;
+    --conteiner-gap: 20px;
+}
+
+.container {
+    max-width: calc(var(--container-width) + var(--conteiner-gap) + var(--conteiner-gap));
+    padding-left: var(--conteiner-gap);
+    padding-right: var(--conteiner-gap);
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+
+    @media (max-width: $widthDesktop-1240) {
+        --container-width: 980px;
+        --container-gap: 8px;
+    }
+}
+
+@media (max-width: $widthDesktop-1240) {
+    .heading {
+        &__links {
+            gap: 10px;
+            font-size: 14px;
+        }
+
+        &__consultationBtn {
+            margin-left: 15px;
+            padding: 10px 15px;
+            font-size: 12px;
+        }
+
+        &__blockSelectTourDate {
+            height: 141px;
+            gap: 18px;
+            padding: 30px 23px;
+        }
+
+        &__dropDownBtn {
+            width: 230px;
+            font-size: 14px;
+        }
+        &__dropDownList{
+            width: 230px;
+            font-size: 14px;
+        }
+        &__inputDateForm{
+            width: 230px;
+            font-size: 14px;
+        }
+        &__searchProgrammBtn{
+            width: 180px;
+            font-size: 14px;
+        }
+    }
+    .aboutHike {
+        &__containerStyle{
+            gap: 170px;
+        }
+    }
+    .offers{
+        &__containerStyle{
+            gap: 50px;
+        }
+    }
+    .popularDirection{
+
+    }
+
+    .photoHub {
+        &__gallery {
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-auto-flow: dense;
+        }
+    }
+}

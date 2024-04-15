@@ -1,0 +1,28 @@
+@font-face {
+    font-family: 'next_art_bold';
+    font-weight: bold; //700
+    src: url(../fonts/NA_Bold.otf) format("opentype");
+}
+
+@font-face {
+    font-family: 'next_art_heavy';
+    src: url(../fonts/NA_Heavy.otf) format("opentype");
+}
+
+@font-face {
+    font-family: 'next_art_light';
+    font-weight: lighter; //300
+    src: url(../fonts/NA_Light.otf) format("opentype");
+}
+
+@font-face {
+    font-family: 'next_art_regular';
+    font-weight: 400;
+    src: url(../fonts/NA_Regular.otf) format("opentype");
+}
+
+@font-face {
+    font-family: 'next_art_semibold';
+    font-weight: 600;
+    src: url(../fonts/NA_SemiBold.otf) format("opentype");
+}
